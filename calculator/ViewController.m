@@ -17,6 +17,33 @@
 @end
 
 @implementation ViewController
+- (IBAction)multiply:(id)sender {
+    NSString* baseNumber = [[self textBox1] text];
+    NSInteger a = [baseNumber integerValue];
+    NSString* multiplyNumber = [[self textBox2] text];
+    NSInteger b = [multiplyNumber integerValue];
+    NSInteger answer = a * b;
+    NSString *inStr = [NSString stringWithFormat: @"%ld", answer];
+    [[self LBLanswer] setText: inStr];
+    
+}
+- (IBAction)divide:(id)sender {
+    NSString* baseNumber = [[self textBox1] text];
+    NSInteger a = [baseNumber integerValue];
+    NSString* divideNumber = [[self textBox2] text];
+    NSInteger b = [divideNumber integerValue];
+    NSInteger answer = a / b;
+    NSString *inStr = [NSString stringWithFormat: @"%ld", answer];
+    [[self LBLanswer] setText: inStr];
+}
+- (IBAction)subtract:(id)sender {
+    NSString* baseNumber = [[self textBox1] text];
+    NSInteger a = [baseNumber integerValue];
+    NSString* subtractNumber = [[self textBox2] text];
+    NSInteger b = [subtractNumber integerValue];
+    NSInteger answer = a - b;
+    NSString *inStr = [NSString stringWithFormat: @"%ld", answer];
+    [[self LBLanswer] setText: inStr];}
 
 
 - (IBAction)add:(id)sender {
