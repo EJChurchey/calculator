@@ -10,13 +10,16 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textBox1;
-
 @property (weak, nonatomic) IBOutlet UITextField *textBox2;
 @property (weak, nonatomic) IBOutlet UILabel *LBLanswer;
 
 @end
 
 @implementation ViewController
+
+-(bool) isValid:(NSString*)s{
+}
+
 - (IBAction)multiply:(id)sender {
     NSString* baseNumber = [[self textBox1] text];
     NSInteger a = [baseNumber integerValue];
