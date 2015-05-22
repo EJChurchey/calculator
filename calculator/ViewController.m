@@ -25,21 +25,17 @@
     return valid;
 }
 
-- (IBAction)multiply:(id)sender {
-   if [self isValid: baseNumber]{
-       
-       NSString* baseNumber = [[self textBox1] text];
-        NSInteger a = [baseNumber integerValue];
-        NSString* multiplyNumber = [[self textBox2] text];
-        NSInteger b = [multiplyNumber integerValue];
-        NSInteger answer = a * b;
-        NSString *inStr = [NSString stringWithFormat: @"%ld", answer];
-        [[self LBLanswer] setText: inStr];
+- (IBAction)multiply:(id)sender
+        NSInteger integer1 = [self getInteger: [self textNumber1]];
+        NSInteger integer2 = [self getInteger: [self texNumber2]];
+        NSInteger answer = integer1 + integer2;
+        NSString * answerString = [NSString stringWithFormat: @"%ld", (long)answer];
+       if [self lblAnswer] setText: answerString];
     
 }
 - (IBAction)divide:(id)sender {
     NSString* baseNumber = [[self textBox1] text];
-    if [self isValid: baseNumber]{
+        [[self isValid: baseNumber];
     
         NSInteger a = [baseNumber integerValue];
         NSString* divideNumber = [[self textBox2] text];
@@ -47,10 +43,10 @@
         NSInteger answer = a / b;
         NSString *inStr = [NSString stringWithFormat: @"%ld", answer];
         [[self LBLanswer] setText: inStr];
-    }
+    
 }
 - (IBAction)subtract:(id)sender {
-    if [self isValid: baseNumber]{
+    if ([self isValid: baseNumber]);
         NSString* baseNumber = [[self textBox1] text];
         NSInteger a = [baseNumber integerValue];
         NSString* subtractNumber = [[self textBox2] text];
@@ -61,7 +57,8 @@
 
 
 - (IBAction)add:(id)sender {
-    if [self isValid: baseNumber]{        NSString* baseNumber = [[self textBox1] text];
+    if [self isValid: baseNumber]{
+        NSString* baseNumber = [[self textBox1] text];
         NSInteger a = [baseNumber integerValue];
         NSString* addNumber = [[self textBox2] text];
         NSInteger b = [addNumber integerValue];
